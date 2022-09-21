@@ -42,3 +42,10 @@
 # x="Python"
 # y=7
 # print(x,y)
+
+x="Hello"
+ 
+def fuction():
+    print(x+" World")
+
+fuction()
