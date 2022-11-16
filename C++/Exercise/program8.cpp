@@ -1,21 +1,26 @@
 #include <string>
 #include <iostream>
 using namespace std;
-void pattern(int n){
-   
-    for(int row=1;row<=n*2-1;row++){
-        int totalcolpr=row>n ? 2*n-row : row;
-        
-        for(int col=1;col<=totalcolpr;col++){
-            cout<<"*";
-        }
-        cout<<endl;
+void finder(string s,string w){
+    string checker;
+    int sl=s.length();
+    int wl=w.length();
+    int j=0,count=0,c;
+    for(int i=0;i<sl;i++){
+            if(w[0]==s[i]){
+                int c=i;
+               for(int j=0;j<wl;j++){
+                checker=s[c++];
+               }
+            }    
+       
     }
+    cout<<checker;
 }
 
 int main()
 {
-    pattern(5);
+    finder("Iam Swaroop and i like Swaroop and Swarop","Swaroop");
 
     return 0;
 }
