@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Destructuring array -->
+        <script>
+            function calculate(a,b){
+                const add=a+b;
+                const sub=a-b;
+                const mul=a*b;
+                const div=a/b;
+                return [add,sub,mul,div];
+            }
+            const [add,sub,mul,div]=calculate(2,6);
+            document.write(add);
+        </script>
+</body>
+</html>

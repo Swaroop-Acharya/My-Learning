@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        hello=function(){
+            return "Hello world";
+        }
+
+        f1=()=>{
+            return " Hello function1";
+        }
+        
+        f2=()=>" Hello function 2";
+
+        let name1="Swaroop";
+        f3=(name1)=> "Hello "+name1;
+
+        f4=name=>"Hello" + name;
+
+
+        document.write(hello);
+        document.write(f1());
+        document.write(f2());
+        document.write(f3(name1));
+        document.write(f4(name1));
+    </script>
+</body>
+</html>

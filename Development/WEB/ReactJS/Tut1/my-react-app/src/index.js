@@ -1,5 +1,11 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-const myFirstElm=<h1>Heloo world Iam Swaroop</h1>
-const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElm);
+
+const myArray = ['apple', 'banana', 'orange'];
+
+const myList = myArray.map((item) => <p>{item}</p>)
+
+ReactDOM.render(myList);
+
+              
