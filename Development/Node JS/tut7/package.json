@@ -1,0 +1,17 @@
+{
+  "name": "tut7",
+  "version": "1.0.0",
+  "description": "this is the best mod",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aswee"
+  ],
+  "author": "Swaroop",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

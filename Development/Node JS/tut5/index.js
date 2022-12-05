@@ -15,12 +15,12 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   if(url=='/'){
     res.end(home);
-  }else if(url=='/about'){
+  }else if(url=='/about.'){
     res.end(about);
-  }else if(url=='/ads'){
+  }else if(url=='/ads.'){
     res.end(ads);
 
-  }else if(url =='/contact'){
+  }else if(url =='/contact.'){
     res.end(contact);
   }else{
     res.statusCode=404;
