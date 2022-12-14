@@ -9,7 +9,7 @@ int main(){
     // c=a & b;
     // c=a ^ b;
     // c=~b;
-    // c= a<< 2;
+    c= a<< 2;
     // c= a>> 2;
     cout<<c;
     return 0;

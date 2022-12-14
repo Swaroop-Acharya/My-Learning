@@ -1,0 +1,16 @@
+Commands :-
+mongod				is to start the database
+mongo					is to make an instance of an db using command line
+use dbname				it will create an new database if it is not created ,otherwise it will connect to the existing db
+show dbs				lists databases
+db.collectionN			it will creates collection(table)
+db.collectionN.insertOne({})	it will insert one document(row) inside the collection
+db.collectionN.insertMany([{},{}])	it will insert Many documents(rows) inside the collection
+db.collectionN.find()		To see the whole list of documents written by us 
+
+
+Example
+
+db.items.insertOne({name:"Samsung",price:19200,gty:1000})
+
+db.items.insertMany([{name:"Samsung",price:19200,gty:1000},{name:"Apple",price:119200,gty:11000}])
