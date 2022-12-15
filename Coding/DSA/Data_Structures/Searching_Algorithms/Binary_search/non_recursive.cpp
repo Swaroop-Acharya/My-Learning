@@ -30,3 +30,4 @@ int main(){
     }
     return 0;
 }
+//Time complexity :- O(log2 n)
