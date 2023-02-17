@@ -5,11 +5,21 @@
 
 <p id="demo"></p>
 
+<p id="defaultdemo"></p>
+
 <script type="module">
-import { name, age } from "person.js";
+
+//Named Modules
+import { name, age } from "./message.js";
 
 document.getElementById("demo").innerHTML = "My name is " + name;
 document.getElementById("demo").innerHTML += ", I am " + age + ".";
+
+//Default Modules
+
+import message from "./person.js";
+
+document.getElementById("demo").innerHTML = message();
 
 </script>
 

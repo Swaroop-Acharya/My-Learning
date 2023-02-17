@@ -1,7 +1,9 @@
 const message = () => {
     const name = "Jesse";
     const age = 40;
-    return name + ' is ' + age + 'years old.';
+    const result=name + ' is ' + age + 'years old.';
+    console.log(result)
+    return result
   };
   
   export default message;
