@@ -1,0 +1,129 @@
+Transpiler:=  It can convert the latest version of JavaScript code into the one that the browser understands. 
+		It is a tool that is used to convert source code into another source code that is of the same level. That is why it is also known as a source-to-source compiler. Both the codes are equivalent in nature,
+		 considering the fact that one works with the specific version of the browser and one doesn’t. 
+
+
+DOM and Virtual DOM:=
+
+
+DOM: DOM stands for ‘Document Object Model’. In simple terms, it is a structured representation of the 
+HTML elements that are present in a webpage or web-app. DOM represents the entire UI of your application. 
+The DOM is represented as a tree data structure. It contains a node for each UI element present in the web
+ document. It is very useful as it allows web developers to modify content through JavaScript, also it being
+ in structured format helps a lot as we can choose specific targets and all the code becomes much easier to 
+work with.
+
+
+How Virtual DOM helps React: In react, everything is treated as a component be it a functional component 
+or class component. A component can contain a state. Each time we change something in our JSX file or let’s
+ put it in simple terms, whenever the state of any component is changed react updates its Virtual DOM tree.
+ Though it may sound that it is ineffective but the cost is not much significant as updating the virtual DOM 
+doesn’t take much time. React maintains two Virtual DOM at each time, one contains the updated Virtual DOM 
+and one which is just the pre-update version of this updated Virtual DOM. Now it compares the pre-update 
+version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which 
+components have been changed. This process of comparing the current Virtual DOM tree with the previous one 
+is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on 
+real DOM. React uses something called batch updates to update the real DOM. It just means that the changes 
+to the real DOM are sent in batches instead of sending any update for a single change in the state of a 
+component. We have seen that the re-rendering of the UI is the most expensive part and React manages to do 
+this most efficiently by ensuring that the Real DOM receives batch updates to re-render the UI. This entire
+ process of transforming changes to the real DOM is called Reconciliation
+
+This significantly improves the performance and is the main reason why React and its Virtual DOM are much 
+loved by developers all around.
+
+JSX(JavaScript Xml):-Enables the developer to write html code inside javascript
+File structure of the react app
+
+
+PUBLIC Directory:=
+robots.txt = used for SEO
+manifest.json = to provide metadata to the device which is going to run react app
+
+
+SRC Directory:=
+
+App.js :- It is the root component
+
+App.test.js, setupTests.js, reportWebVitals.js := related to app performance and testing
+
+
+Note :-
+ .js files are called as components and inside .js files there are functional components
+
+
+components:-small piece of functionality
+		example- button
+Modules:- They are stand alone units of code that u can reuse again and again. series of components
+Modular Programming :- This technique of splitting your code into several modules is known as modular programming
+
+Props:=
+
+They help us to build dynamic webpages.
+Prop object is used to pass value from one component to another. They are like Javascript objects which holds
+related properties of different types that can be accessed using . operator. 
+Arguments are passed like HTML attributes.
+Uses the keyword props.
+When two components communicate with each other using props, the component sending prop data is called as Parent
+and the component recieving the prop data is called as child.
+There can be possible to parent component to send data to multiple child component.
+but reverse of it is not possible because data flow is one directional i.e, parent -> child
+
+Limitations:-
+	Not possible to send data from child to parent using props
+	pure functions(Always returns the same output for the same agrument values) which means when u declare 
+		function using props it cannot modify its own props.
+	fuction using props must never modify its own props.
+
+
+Function expression and arrow functions:=
+	Function expression is nothing but assigning the anonymous unnamed function to the variable;
+
+Arrow Function:-
+	Here function keyword is replaced by the '=>' symbol.
+	If there is a single parameter is passed to the function we dont need to add '()';
+	Implicit return , we can ignore the currley braces if there is a single return in the component .
+
+ side-note, the term "vanilla JavaScript" is often used to describe the plain, regular JavaScript language 
+syntax, without any framework-specific or library-specific code. For example, React is a library, so in this
+ context, saying that a piece of code is "vanilla JavaScript" means that it doesn't need any special library 
+to run. It can run in "plain" JavaScript without any additional dependencies.
+
+
+Ternary operator:=
+
+
+(condition)? " print this  ": " else print this ";
+nothing but,
+	comparison ? true : false
+
+
+Expression as props:=
+	props can be expressions
+example:-
+const bool = false;
+const str1 = "just";
+
+function Example(props) {
+    return (
+        <div>
+            <h2>
+                The value of the toggleBoolean prop is:{props.toggleBoolean.toString()}
+            </h2>
+            <p>The value of the math prop is: <em>{props.math}</em></p>
+            <p>The value of the str prop is: <em>{props.str}</em></p>
+        </div>
+    );
+};
+
+export default function App() {
+    return (
+        <div className="App">
+            <Example
+                toggleBoolean={!bool}
+                math={(10 + 20) / 3}
+                str={str1 + ' another ' + 'string'}
+            />
+        </div>
+    );
+};
