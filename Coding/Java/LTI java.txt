@@ -1,0 +1,21 @@
+String comparison operations:=
+	str1.equals(str2)- Case sensitive
+	str1.equalsIgnoreCase(str2)- Not case sensitive
+	str1.compareTo(str2)- returns 0 if both strings are same
+				    returns + number if str1 is bigger than str2
+                            returns - number if str2 is bigger than str1
+	str1.compareToIgnoreCase(str2)- Not case sensitive.
+	str1.matches(regex)- matches the string to regular expressions , returns true if matches otherwise false.
+
+String search operations:=
+	str1.contains(str2)- returns true if str1 contains the str2 and this operation is case sensitive.
+	str1.startsWith(str2)- returns truestr1 starts with the string str2 else false.
+	str1.endsWith(str2)- returns true 
+	str1.indexOf(str2)
+	str1.indexof(str2,fromIndex)
+	str1.lastIndexOf(str2)
+
+String cut(slice) operations:=
+	str1.charAt(0)- returns the first character.
+	str1.split(str2)- it splits
+	str1.substring(strtindex,endindex)
