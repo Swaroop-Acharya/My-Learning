@@ -11,7 +11,7 @@ function focus(){
 return(
     <div>
         <h4>Use Ref hook</h4>
-        <input ref={inputEl} value={text} onChange={()=>setText(e.target.value)}/>
+        <input ref={inputEl} value={text} onChange={(e)=>setText(e.target.value)}/>
         <button onClick={focus}>Focus</button>
     </div>
 )
@@ -19,4 +19,4 @@ return(
 
 }
 
-export default UseRef;
+export { UseRef};

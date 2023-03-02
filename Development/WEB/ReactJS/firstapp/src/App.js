@@ -23,7 +23,7 @@ import { ObjectData } from './components/Hooks/UseState';
 import { PassFunction } from './components/Hooks/UseState';
 import { PassFunctionEx } from './components/Hooks/UseState';
 //useRef
-import {UseRef} from './components/Hooks/UseRef';
+import { UseRef } from './components/Hooks/UseRef';
 
 //Fuctional component
 function Title(){
@@ -93,7 +93,7 @@ function App() {
             <Counter/>
             <ObjectData/>
             <PassFunction/>
-            <PassFunctionEx/>
+            {/* <PassFunctionEx/> */}
         </div>
         <div>
           <h5>Use Ref hook example</h5>
