@@ -12,6 +12,8 @@ import { Fn1 } from './components/EventHandling';
 import { Fn2 } from './components/EventHandling';
 import ModeToggler from './components/ModeToggler';
 
+
+import Promo from './components/Parent_child_dataflow/Promo';
 //Fuctional component
 function Title(){
   let title="This is our main title";
@@ -71,6 +73,10 @@ function App() {
 
     <div>
       <ModeToggler/>
+    </div>
+
+    <div>
+      <Promo/>
     </div>
       
       </>
