@@ -14,6 +14,17 @@ import ModeToggler from './components/ModeToggler';
 
 
 import Promo from './components/Parent_child_dataflow/Promo';
+
+//Hooks
+//useState
+import UseState from './components/Hooks/UseState';
+import { Counter } from './components/Hooks/UseState';
+import { ObjectData } from './components/Hooks/UseState';
+import { PassFunction } from './components/Hooks/UseState';
+import { PassFunctionEx } from './components/Hooks/UseState';
+//useRef
+import {UseRef} from './components/Hooks/UseRef';
+
 //Fuctional component
 function Title(){
   let title="This is our main title";
@@ -59,10 +70,6 @@ function App() {
         </Orange>
       </Bag>
 
-
-
-
-
     </div>
     <div>
       <Es5f/>
@@ -78,7 +85,22 @@ function App() {
     <div>
       <Promo/>
     </div>
-      
+      <div>
+        <h1>Hooks in React</h1>
+        <div>
+          <h5>Use state examples</h5>
+            <UseState/>
+            <Counter/>
+            <ObjectData/>
+            <PassFunction/>
+            <PassFunctionEx/>
+        </div>
+        <div>
+          <h5>Use Ref hook example</h5>
+          <UseRef/>
+        </div>
+        
+      </div>
       </>
 
 
