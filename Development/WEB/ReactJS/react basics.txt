@@ -1,0 +1,305 @@
+Transpiler:=  It can convert the latest version of JavaScript code into the one that the browser understands. 
+		It is a tool that is used to convert source code into another source code that is of the same level. That is why it is also known as a source-to-source compiler. Both the codes are equivalent in nature,
+		 considering the fact that one works with the specific version of the browser and one doesn’t. 
+
+
+DOM and Virtual DOM:=
+
+
+DOM: DOM stands for ‘Document Object Model’. In simple terms, it is a structured representation of the 
+HTML elements that are present in a webpage or web-app. DOM represents the entire UI of your application. 
+The DOM is represented as a tree data structure. It contains a node for each UI element present in the web
+ document. It is very useful as it allows web developers to modify content through JavaScript, also it being
+ in structured format helps a lot as we can choose specific targets and all the code becomes much easier to 
+work with.
+
+
+How Virtual DOM helps React: In react, everything is treated as a component be it a functional component 
+or class component. A component can contain a state. Each time we change something in our JSX file or let’s
+ put it in simple terms, whenever the state of any component is changed react updates its Virtual DOM tree.
+ Though it may sound that it is ineffective but the cost is not much significant as updating the virtual DOM 
+doesn’t take much time. React maintains two Virtual DOM at each time, one contains the updated Virtual DOM 
+and one which is just the pre-update version of this updated Virtual DOM. Now it compares the pre-update 
+version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which 
+components have been changed. This process of comparing the current Virtual DOM tree with the previous one 
+is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on 
+real DOM. React uses something called batch updates to update the real DOM. It just means that the changes 
+to the real DOM are sent in batches instead of sending any update for a single change in the state of a 
+component. We have seen that the re-rendering of the UI is the most expensive part and React manages to do 
+this most efficiently by ensuring that the Real DOM receives batch updates to re-render the UI. This entire
+ process of transforming changes to the real DOM is called Reconciliation
+
+This significantly improves the performance and is the main reason why React and its Virtual DOM are much 
+loved by developers all around.
+
+JSX(JavaScript Xml):-Enables the developer to write html code inside javascript
+File structure of the react app
+
+
+PUBLIC Directory:=
+robots.txt = used for SEO
+manifest.json = to provide metadata to the device which is going to run react app
+
+
+SRC Directory:=
+
+App.js :- It is the root component
+
+App.test.js, setupTests.js, reportWebVitals.js := related to app performance and testing
+
+
+Note :-
+ .js files are called as components and inside .js files there are functional components
+
+
+components:-small piece of functionality
+		example- button
+Modules:- They are stand alone units of code that u can reuse again and again. series of components
+Modular Programming :- This technique of splitting your code into several modules is known as modular programming
+
+Props:=
+
+They help us to build dynamic webpages.
+Prop object is used to pass value from one component to another. They are like Javascript objects which holds
+related properties of different types that can be accessed using . operator. 
+Arguments are passed like HTML attributes.
+Uses the keyword props.
+When two components communicate with each other using props, the component sending prop data is called as Parent
+and the component recieving the prop data is called as child.
+There can be possible to parent component to send data to multiple child component.
+but reverse of it is not possible because data flow is one directional i.e, parent -> child
+
+Limitations:-
+	Not possible to send data from child to parent using props
+	pure functions(Always returns the same output for the same agrument values) which means when u declare 
+		function using props it cannot modify its own props.
+	fuction using props must never modify its own props.
+
+
+Function expression and arrow functions:=
+	Function expression is nothing but assigning the anonymous unnamed function to the variable;
+
+Arrow Function:-
+	Here function keyword is replaced by the '=>' symbol.
+	If there is a single parameter is passed to the function we dont need to add '()';
+	Implicit return , we can ignore the currley braces if there is a single return in the component .
+
+ side-note, the term "vanilla JavaScript" is often used to describe the plain, regular JavaScript language 
+syntax, without any framework-specific or library-specific code. For example, React is a library, so in this
+ context, saying that a piece of code is "vanilla JavaScript" means that it doesn't need any special library 
+to run. It can run in "plain" JavaScript without any additional dependencies.
+
+
+Ternary operator:=
+
+
+(condition)? " print this  ": " else print this ";
+nothing but,
+	comparison ? true : false
+
+
+Expression as props:=
+	props can be expressions
+example:-
+const bool = false;
+const str1 = "just";
+
+function Example(props) {
+    return (
+        <div>
+            <h2>
+                The value of the toggleBoolean prop is:{props.toggleBoolean.toString()}
+            </h2>
+            <p>The value of the math prop is: <em>{props.math}</em></p>
+            <p>The value of the str prop is: <em>{props.str}</em></p>
+        </div>
+    );
+};
+
+export default function App() {
+    return (
+        <div className="App">
+            <Example
+                toggleBoolean={!bool}
+                math={(10 + 20) / 3}
+                str={str1 + ' another ' + 'string'}
+            />
+        </div>
+    );
+};
+
+
+Events:=
+
+const MouseClick = () => console.log("U clicked me");
+const Over = () => console.log("Mouse hovered");
+function Btn(props) {
+  return (
+    <button onClick={MouseClick} onMouseOver={Over}>
+      Submit
+    </button>
+  );
+}
+
+export default Btn;
+
+
+
+Event Handling and embeded expressions:=
+Tip: A way to determine if a function is defined as an expression or a declaration is: if it does not start the line with the keyword function, then it’s an expression
+     You cannot invoke an event-handling function from a JSX expression.
+
+Example := EventHandle.js
+
+
+
+Parent-child Data flow:=
+
+Dataflows from parent to child it is unidirectional. Passing data from one parent to many child components
+can be done using props. Which helps in code reusablity
+
+import PromoHeading from './PromoHeading';
+function Promo(){
+    const data={
+        discount:"81% off on all products",
+        message:"3 days left hurry up!!!"
+    };
+    return (
+        <PromoHeading discount={data.discount} message={data.message}/>
+    )
+}
+
+export default Promo;
+
+
+function PromoHeading(props){
+    return (
+        <div>
+            <h1>{props.discount}</h1>
+            <p>{props.message}</p>
+        </div>
+        
+    )
+}
+
+In React, data flow is a one-way street. Sometimes it's said that the data flow is unidirectional.
+ Put differently, the data in React flows from a parent component to a child component. 
+The data flow starts at the root and can flow to multiple levels of nesting, from the root component
+ (parent component) to the child component, then the grandchild component, and further down the hierarchy.
+
+
+Children and Data:=
+
+There are two kinds of Data in react:
+	1) Prop data
+	2) State data
+1) Prop data : It is the data that is from outside the component 
+		   It is not mutable(cannot change able)
+2) State data: It is the data present within the component itself
+		   It is mutable (changeble)
+
+Note: The props parameter is of type object
+
+
+
+Hooks:=
+Hooks allow developers to hook into some otherwise inaccessible functionality.
+It is used to maintain state within the react component.
+Key benefits :- reduces uneccsary code reuse
+
+Hooks are the functions that let you hook into react state and lifecycle feature from components.
+
+Example for hooks is useState hook which commonly used one.It is used to managae state within component
+and it is built within the react.
+
+useState hook should be called at the top level of ur component
+
+we can build our own hooks 
+
+Hooks helps in better readablity and simplicity
+
+Use State Hook:=
+Enables use of component for controlling the state.
+useState returns two things one is state variable with its intial value and a method to update the state
+variable.
+
+Hooks also come with a set of rules, that you need to follow while using them. This applies to all React hooks, including the useState hook that you just learned.
+
+	->You can only call hooks at the top level of your component or your own hooks. 
+
+	->You cannot call hooks inside loops or conditions. 
+
+	->You can only call hooks from React functions, and not regular JavaScript functions. 
+
+In addition to the useState hook, there are other hooks that come in handy such as useContext, useMemo, 
+useRef, etc. When you need to share logic and reuse the same logic across several components, you can 
+extract the logic into a custom hook. Custom hooks offer flexibility and can be used for a wide range of 
+use-cases such as form handling, animation, timers, and many more. 
+
+Note: one cannot update the state ,using setState method directly . instead he can use button to change it.
+
+Important things about hooks:=
+ 	you can only use inside of functional component , u cannot use it inside class component.
+	You cannot put hooks inside of if statements, loops, function 
+	It should be called at the top level of ur component.
+	whenever the state changes i.e update the state ur component it will render the component.
+	Whenever we pass object as default value to the state, whenever u update the state object
+		u have to update with old value so the updates gets merged. Update will not be merged whenever 
+		we are using the useState hooks, it just overrides the previous state.
+	Whenever we dealing with complex math ,it will slows the app performance. u can pass the state in two ways
+		1) useState(4)
+		2) useState(()=> {
+					console.log("it will run one time");
+					return 4;
+					} 
+UseRef hook:=
+
+it is same as state , we can change the value without re-rendering the component and also it can be used to 
+reference the html element .
+
+video links:-
+	useState():- https://www.youtube.com/watch?v=O6P86uwfdR0
+	useRef():- https://www.youtube.com/watch?v=t2ypzz6gJm0
+
+
+What is state?
+	Data in a component that determines the behaviour.
+	It is used to store the data.
+	States is important because it allows components to stay in sync with each other and 
+ensure that your app behaves as intended, for example, if one component updates its State, all other 
+components that depend on that State will automatically update too. This means that a component sends 
+its State to its children by using props.
+
+
+components can be either stateful or stateless
+
+React State Management:=
+
+Prop drilling;-prop drilling is a situation where you are passing data from a parent to a child 
+component, then to a grandchild component, and so on, until it reaches a more distant component further
+ down the component tree, where this data is required.
+
+Instead we can use context api to pass the state to the several components.
+
+Context api is used to manage the state more effiently across multiple components.
+
+
+What does the concept of “lifting up state” entail?
+	It involves moving the state from the child component to the parent component.
+
+What is a negative result of lifting up state in a React app?
+	Prop drilling.
+
+Statefull and stateless;=
+
+Parent:- statefull
+child:-stateless
+
+It is possible to pass state as prop data from parent to child component.Also, it can pass function and values.
+
+
+The process of lifting up state can lead to: 
+	 A stateful component becoming a stateless component:-ifting up state means moving state up from a
+	 child to the parent component - meaning that a previously stateless parent component becomes a
+	 stateful component, and a previously stateful child component becomes a stateless component.
+	A stateless component becoming a stateful component.
