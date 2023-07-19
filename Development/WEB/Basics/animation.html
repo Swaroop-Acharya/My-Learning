@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: slider 4s ease-in 0.2s 4 forwards normal;
+        }
+        @keyframes slider {
+            0%{
+                background-color: red;
+                top:0;
+                left: 0;
+            }
+            25%{
+                background-color: cyan;
+                top:0;
+                left: 150px;
+                
+                
+            }
+            50%{
+                
+                background-color: blueviolet;
+                top:150px;
+                left: 150px;
+            }
+            75%{
+                
+                background-color: greenyellow;
+                top:150px;
+                left: 0;
+
+            }
+            100%{
+                background-color: aquamarine;
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

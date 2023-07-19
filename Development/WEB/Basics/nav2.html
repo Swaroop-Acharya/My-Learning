@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        width: 250px;
+        border: 1px solid black;
+      }
+      li{
+        text-align: center;
+        border-bottom: 1px solid black;
+      }
+      li:last-child{
+        border-bottom: none;
+      }
+      li a {
+        display: block;
+        padding:5px 10px;
+        text-decoration: none;
+        color: #000;
+      }
+      
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+      .active{
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: aquamarine;
+            overflow: hidden;
+        }
+
+        li{
+            float: left;;
+        }
+        li a{
+            display: block;
+            padding: 10px 16px;
+            text-decoration: none;
+            color: black;
+        }
+
+        li a:hover, .drop-down:hover .drop-dwnBtn{
+            background-color: blueviolet;
+            color: white;
+        }
+        
+
+        
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: lightslategrey;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a:hover{
+            background-color: limegreen;
+        }
+
+        .drop-down:hover .dropdown-content{
+            display: block;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li class="drop-down"><a class="drop-dwnBtn" href="#">Project</a>
+        <div class="dropdown-content">
+            <a href="#">Project1</a>
+            <a href="#">Project2</a>
+            <a href="#">Project3</a>
+        </div>
+      <li class="drop-down" style="float: right; "><a class="drop-dwnBtn" href="#">Project</a>
+        <div class="dropdown-content" style="right: 0;">
+            <a href="#">Project1</a>
+            <a href="#">Project2</a>
+            <a href="#">Project3</a>
+        </div>
+        
+    </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.hero__img{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero__description{
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+}
+
+.hero__btn{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: var(--size-sm);
+}
+

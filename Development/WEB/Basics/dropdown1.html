@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .c{
+            display: relative;
+        }
+
+        .drop-content{
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            position: absolute;
+            width: 150px;
+            display: none;
+            z-index: 1;
+        }
+        .drop-content a{
+            display: block;
+            background-color: white;
+            cursor: pointer;
+        }
+        .container:hover .drop-content{
+            display: block;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="clc">MouseCLICK</button>
+      <div class="drop-content">
+        <a href="#">Home</a>
+        <a href="#">Home</a>
+        <a href="#">Home</a>
+      </div>
+    </div>
+  </body>
+</html>

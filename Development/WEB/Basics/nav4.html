@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: sticky;
+        top: 0;
+      }
+
+      li {
+        float: left;
+        border-right: 1px solid white;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .active {
+        background-color: #04aa6d;
+      }
+      .right{
+        float: right;
+      }
+
+      li:last-child{
+        border-right: none;
+      }
+      div{
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+
+        <h1>Scroll Down</h1>
+        <h4>coll down yo bro</h4>
+    </div>
+    <ul>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="right"><a class="right" href="#">About</a></li>
+    </ul>
+    <div>
+        <h1>Hi low</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis quaerat rerum iusto nostrum iure impedit ab minima nulla voluptates fugiat, tempore sit provident natus quam ipsa nihil dignissimos consequuntur voluptatibus autem optio exercitationem reiciendis omnis ducimus. Qui rem temporibus incidunt vitae! Id cupiditate exercitationem itaque reiciendis, labore possimus doloremque, enim corporis repellat nobis autem architecto ducimus facilis? Ea, molestias, amet consequatur enim possimus reprehenderit, aliquid nam officia similique nostrum placeat voluptates veniam incidunt architecto! Esse, repudiandae quas distinctio vitae tempore dolor praesentium ex inventore expedita reprehenderit nemo. Deleniti ullam ipsam suscipit provident quasi alias magnam dolorum quo facere debitis.</p>
+    </div>
+  </body>
+</html>

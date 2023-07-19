@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      ::selection {
+        background-color: aquamarine;
+        color: violet;
+      }
+
+      @media (max-width: 200px) {
+        h1 {
+          color: blue;
+        }
+      }
+      @media (min-width: 200px) {
+        h1 {
+          color: red;
+        }
+      }
+      .container{
+        width: 400px;
+        border: 1px solid black;
+        text-align: center;
+        
+      }
+
+      .container:hover{
+        transform: rotate(160deg);
+        transform: skew(10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="color">Hellow world</h1>
+    </div>
+  </body>
+</html>

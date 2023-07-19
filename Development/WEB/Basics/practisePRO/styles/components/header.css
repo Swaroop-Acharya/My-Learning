@@ -1,0 +1,33 @@
+.header{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header__menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.header__links{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: var(--size-xs);
+    font-weight: 600;
+    letter-spacing: -.05em;
+}
+
+.header__line{
+    border: 1px solid var(--clr-slate600);
+    padding-bottom: 1em;
+}
+
+.header__logo{
+    color: white;
+    padding-left: 2em;
+}

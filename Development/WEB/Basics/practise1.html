@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            border-radius: 10px;
+
+        }
+        li{
+            float: left;
+        }
+        li a{
+            text-decoration: none;
+            color: rgb(118, 114, 114);
+            display: inline-block;
+            padding: 10px 16px;
+            transition: all 0.6s ease-in;
+        }
+        .right{
+            float: right;
+        }
+        .drp-cont{
+                position: absolute;
+                border-radius: 10px;
+        }
+
+        .drp-cont a{
+            display: none;
+            background-color: lightblue;
+        }
+
+        .dropdown:hover a{
+            display: block;
+        }
+
+        li a:hover{
+            color: white;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li  class="dropdown"><a class="drp-btn" href="#">Projects</a>
+                <div class="drp-cont">
+                    <a href="#">Project1</a>
+                    <a href="#">Project2</a>
+                    <a href="#">Project3</a>
+                </div>
+                
+            </li>
+            <li class="right"><a href="#">Socials</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
