@@ -2181,47 +2181,60 @@ const countries = [
 // Add Express with level 9 to the back end skill sets
 // Add SQL with level 8 to the data base skill sets
 // Add SQL without level to the data science skill sets
-const student = {
-  name: "David",
-  age: 25,
-  skills: {
-    frontEnd: [
-      { skill: "HTML", level: 10 },
-      { skill: "CSS", level: 8 },
-      { skill: "JS", level: 8 },
-      { skill: "React", level: 9 },
-    ],
-    backEnd: [
-      { skill: "Node", level: 7 },
-      { skill: "GraphQL", level: 8 },
-    ],
-    dataBase: [{ skill: "MongoDB", level: 7.5 }],
-    dataScience: ["Python", "R", "D3.js"],
-  },
-};
+// const student = {
+//   name: "David",
+//   age: 25,
+//   skills: {
+//     frontEnd: [
+//       { skill: "HTML", level: 10 },
+//       { skill: "CSS", level: 8 },
+//       { skill: "JS", level: 8 },
+//       { skill: "React", level: 9 },
+//     ],
+//     backEnd: [
+//       { skill: "Node", level: 7 },
+//       { skill: "GraphQL", level: 8 },
+//     ],
+//     dataBase: [{ skill: "MongoDB", level: 7.5 }],
+//     dataScience: ["Python", "R", "D3.js"],
+//   },
+// };
 
-// solution
+// // solution
 
-const newStudent={
-    ...student,
-    skills:{
-        frontEnd:[
-            ...student.skills.frontEnd,
-            {skill:"Bootstrap",level:8}
-        ],
-        backEnd:[
-            ...student.skills.backEnd,
-            {skill:"Express",level:9}
-        ],
-        dataBase:[
-            ...student.skills.dataBase,
-            {skill:"SQL",level:8}
-        ]
-        ,
-        dataScience:[
-            ...student.skills.dataScience,
-            'SQL'
-        ]
-    }
-}
-console.log(newStudent)
+// const newStudent = {
+//   ...student,
+//   skills: {
+//     frontEnd: [...student.skills.frontEnd, { skill: "Bootstrap", level: 8 }],
+//     backEnd: [...student.skills.backEnd, { skill: "Express", level: 9 }],
+//     dataBase: [...student.skills.dataBase, { skill: "SQL", level: 8 }],
+//     dataScience: [...student.skills.dataScience, "SQL"],
+//   },
+// };
+// console.log(newStudent);
+
+// function vowelsAndConsonants(s) {
+
+// const vowels=['a','e','i','o','u']
+// const sVowels=[]
+// const sConso=[]
+//  for(const st of s){
+//     if(vowels.includes(st.toLowerCase())){
+//         sVowels.push(st)
+//     }else{
+//         sConso.push(st)
+//     }
+//  }
+//  let res=sVowels.concat(sConso).join("\n")
+//  console.log(res)
+// }
+
+
+// vowelsAndConsonants("javascriptloops")
+
+
+
+
+console.log(variable)
+
+var variable="Swaroop"
