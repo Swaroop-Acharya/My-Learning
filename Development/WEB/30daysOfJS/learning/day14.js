@@ -9,7 +9,7 @@ try {
 
 const throwErrorExampleFun = () => {
     let message
-    let x = prompt('Enter a number: ')
+    let x = 1
     try {
       if (x == '') throw 'empty'
       if (isNaN(x)) throw 'not a number'

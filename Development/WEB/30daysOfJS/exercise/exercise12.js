@@ -18,15 +18,15 @@
 // is_valid_variable('1first_name') # False
 // is_valid_variable('firstname') # True
 
-// function isValidVariable(variableName) {
-//     const pattern = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
-//     return pattern.test(variableName);
-// }
+function isValidVariable(variableName) {
+    const pattern = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
+    return pattern.test(variableName);
+}
 
-// console.log(isValidVariable('first_name '));   // true
-// console.log(isValidVariable('first-name'));   // false
-// console.log(isValidVariable('1first_name'));  // false
-// console.log(isValidVariable('firstname'));    // true
+console.log(isValidVariable('first_name '));   // true
+console.log(isValidVariable('first-name'));   // false
+console.log(isValidVariable('1first_name'));  // false
+console.log(isValidVariable('firstname'));    // true
 
 //Writ a function which cleans text. Clean the following text. After cleaning, count three most frequent words in the string.
 // sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
@@ -36,12 +36,13 @@ function cleanText(sentence){
     const pattern=/[^\w\s]/g
     return sentence.replace(pattern,'')
 }
-sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple.
+ ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
 const res=cleanText(sentence)
 console.log(cleanText(sentence))
 
 
-
+// Most frequent words problem
 function tenMostFrequentWords(paragraph) {
     
     let arr = paragraph.split(/\W+/);
