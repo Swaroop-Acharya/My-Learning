@@ -53,3 +53,6 @@ const newObj = arr.reduce((acc, cur) => {
   return ({ ...acc, [cur]: cur });
 }, {});
 console.log(newObj);
+
+
+console.log(Infinity && true)
