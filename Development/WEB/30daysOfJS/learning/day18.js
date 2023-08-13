@@ -4,31 +4,31 @@
 // //promise constructor
 // //async and await
 
-// let userLeft=true
-// let userWatchingOtherVideo=false
+let userLeft=true
+let userWatchingOtherVideo=false
 
-// // function watchTutCallback(sucessCallback,errorCallback)
-// // {
-// //     if(true){
-// //         errorCallback({
-// //             name:"User left",
-// //             message:";-("
-// //         })
-// //     }else if(userWatchingOtherVideo){
-// //         errorCallback({
-// //             name:"Sorry",
-// //             message:"User is watching other videos"
-// //         })
-// //     }else{
-// //         sucessCallback("Congo user is watching your video and he subsribed")
-// //     }
-// // }
+function watchTutCallback(sucessCallback,errorCallback)
+{
+    if(true){
+        errorCallback({
+            name:"User left",
+            message:";-("
+        })
+    }else if(userWatchingOtherVideo){
+        errorCallback({
+            name:"Sorry",
+            message:"User is watching other videos"
+        })
+    }else{
+        sucessCallback("Congo user is watching your video and he subsribed")
+    }
+}
 
-// // watchTutCallback((message)=>{
-// //     console.log(message)
-// // },(error)=>{
-// //     console.log(error.name+"-----"+error.message)
-// // })
+watchTutCallback((message)=>{
+    console.log(message)
+},(error)=>{
+    console.log(error.name+"-----"+error.message)
+})
 
 // function watchTutPromise(){
 //     return new Promise((resolve,reject)=>{
