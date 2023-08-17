@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .numberContainer{
+            display: grid;
+            margin-top: 10px;
+            grid-template-columns: repeat(9,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Number Generator</h1>
+        <p></p>
+        <div class="inputSection">
+            <input type="text" name="" id="number" class="numberInput">
+            <button class="generateNum">Generate Numbers</button>
+        </div>
+        <div class="numberContainer">
+
+        </div>
+    </div>
+    <script src="day23.js"></script>
+</body>
+</html>

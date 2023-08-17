@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+          body{
+              overflow: hidden;
+          }
+            .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh; /* Use min-height instead of height */
+          flex-direction: column; /* Stack content vertically */
+      }
+
+      .message {
+            border: 1px solid black;
+            padding: 10px 15px;
+          text-align: center; 
+          box-shadow: 1px 1px 1px 1px black;
+      }/* Center the text horizontally */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="message">
+        <h1>Press any key </h1>
+      </div>
+      <div class="codeMessage">
+       <h3></h3>
+      </div>
+    </div>
+    <script src="day23.js"></script>
+  </body>
+</html>

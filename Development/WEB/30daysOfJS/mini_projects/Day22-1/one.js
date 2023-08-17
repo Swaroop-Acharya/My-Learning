@@ -14,13 +14,12 @@ function insertElement() {
     if (i % 2 === 0) {
       div.style.backgroundColor = "green";
     } else {
-      div.style.backgroundColor = "yellow";
-    }
-
-    if (isPrime(i)) {
       div.style.backgroundColor = "red";
     }
 
+    if (isPrime(i)) {
+      div.style.backgroundColor = "yellow";
+    }
     container.appendChild(div);
   }
 }
