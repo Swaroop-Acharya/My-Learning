@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>World Countries Data</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="countries">
+        <h2>World Countries Data</h2>
+        <p class="subtitle"></p>
+      </header>
+      <main>
+        <div class="wrapper">
+          <div class="graph-buttons">
+            <button class="population btn">Population</button>
+            <button class="language btn">Languages</button>
+          </div>
+		  <h4 class="graph-title"></h4>
+        </div>
+
+          <div class="graphs">
+            <div id="barGraph" class="bar-graph-container"></div>
+          </div>
+      </main>
+    </div>
+
+    <script src="./data/countries_data.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
