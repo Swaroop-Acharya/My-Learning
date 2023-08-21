@@ -2108,7 +2108,6 @@ function graphBuilder(arr,totalCount) {
     barGraphContainer.appendChild(mainDiv);
   });
 }
-
 function setupGraph(buttonElement, dataFunction, titleHandler, totalValue) {
   buttonElement.addEventListener("click", () => {
     graphTitleHandler(titleHandler);
