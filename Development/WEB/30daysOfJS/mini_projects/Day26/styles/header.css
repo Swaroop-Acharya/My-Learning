@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 56vh;
+  background-color:rgb(19 60 129 / 51%)
+ 
+}
+
+.headerImg {
+  display: block;
+  width: 100%;
+  height: 100%; /* Fill the entire height of the header */
+  object-fit: cover;
+  position: absolute;
+  z-index: -10;
+  opacity: 0.9;
+  
+}
+h1{
+    letter-spacing: 1rem;
+}
+
+h1,h4,p{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.imageCover {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer{
+    margin: 10px;
+}
+
+#search{
+    padding: 9px 22px;
+    width: 325px;
+    border-radius: 18px;
+    border: none;
+}
+.searchBtn{
+    padding: 9px 22px;
+    cursor: pointer;
+    border-radius:30px 30px 30px 30px ;
+    border-color: grey;
+    background-color: rgb(19 60 129);
+}
+
+.Btn{
+    padding: 8px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+}
+.orderBtn{
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+}
+
+.btnContainer{
+    margin: 15px 0;
+}
+
+
+.active{
+    background-color:rgb(19 60 129 / 51%) ;
+}

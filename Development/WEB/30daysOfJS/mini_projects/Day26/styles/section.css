@@ -1,0 +1,39 @@
+.countryName{
+    color: white;
+    font-variant: small-caps;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 0.5rem;
+    padding: 10px 10px;
+}
+
+.countryDiv{
+    background-color:rgb(19 60 129 / 51%);
+    position: relative;
+    width: 150px;
+    height: 170px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+  
+}
+.countryImg
+{
+    display: block;
+    width: 100%;
+    height: 100%; /* Fill the entire height of the header */
+    object-fit: cover;
+    position: absolute;
+    z-index: -10;
+    opacity: 0.9;
+}
+
+.hide{
+    display: none;
+}
+
