@@ -7,8 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    
-
+    <div class="container">
+        <header>
+            <h1>Leaderboard</h1>
+            <div class="inputContainer">
+                <input type="text" name="fname" id="fname" placeholder="First name">
+                <input type="text" name="lname" id="lname" placeholder="Last name">
+                <input type="text" name="country" id="country" placeholder="Country">
+                <input type="text" name="score" id="score" placeholder="Player Score">
+                <button class="addBtn">
+                    Add Player
+                </button>
+            </div>
+            <p></p>
+        </header>
+        <main>
+            <section>
+                <template card-template>
+                    <div class="cardContainer">
+                        <div class="userDetails">
+                            <h3 user-name></h3>
+                            <p date></p>
+                        </div>
+                        <div class="countryContainer">
+                            <h3 user-country></h3>
+                        </div>
+                        <div class="scoreContainer">
+                            <h3 user-score></h3>
+                        </div>
+                        <div class="btnContainer">
+                            <button class="deleteBtn">Delete</button>
+                            <button class="plusFive">Plus Five</button>
+                            <button class="minusFive">
+                                Minus Five
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </section>
+        </main>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
