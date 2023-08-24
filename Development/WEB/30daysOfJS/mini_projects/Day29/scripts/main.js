@@ -11,6 +11,7 @@ console.log(cardTemplate.content.cloneNode(true).children[0])
 console.log("redered")
 const arrObj = [];
 
+
 function cardFiller(arr,newObj) {
     cardContainer.innerHTML = '';
     arr.forEach((user) => {
@@ -80,12 +81,10 @@ function inputValidation() {
             }
         }
       };
-      
       arrObj.push(newObj);
       arrObj.sort((a, b) => b.score - a.score);
       
       cardFiller(arrObj,newObj);
-      
       p.style.color = "green";
       p.textContent = "Data added successfully";
       fname.value=""
