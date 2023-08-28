@@ -2146,32 +2146,32 @@ const countries2 = [
 // {country: 'Arabic',count: 25},
 // ]
 
-// function mostSpoken(countries2,count){
+function mostSpoken(countries2,count){
 
-//     const languageCount = {};
+    const languageCount = {};
 
-//     for (const country of countries2) {
-//       for (const language of country.languages) {
-//         languageCount[language] = (languageCount[language] || 0) + 1;
-//       }
-//     }
+    for (const country of countries2) {
+      for (const language of country.languages) {
+        languageCount[language] = (languageCount[language] || 0) + 1;
+      }
+    }
+    console.log(languageCount)
+    const languageArr = [];
 
-//     const languageArr = [];
+    for(const language in languageCount) {
+      languageArr.push({ language: language, count: languageCount[language] });
+    }
 
-//     for(const language in languageCount) {
-//       languageArr.push({ language: language, count: languageCount[language] });
-//     }
+    languageArr.sort((a, b) => b.count - a.count);
 
-//     languageArr.sort((a, b) => b.count - a.count);
+   const arr= languageArr.filter((ele,index,arr)=>{
+      return index < count
+   })
+   return arr
+}
 
-//    const arr= languageArr.filter((ele,index,arr)=>{
-//       return index < count
-//    })
-//    return arr
-// }
-
-// console.log(mostSpoken(countries2,10))
-// console.log(mostSpoken(countries2,3))
+console.log(mostSpoken(countries2,10))
+console.log(mostSpoken(countries2,3))
 
 // 3) *** Use countries_data.js file create a function which create the ten most populated countries
 

@@ -29,6 +29,19 @@ const webTechs = [
     }
     console.log(i)
     console.log(i)
+
+
+
   }
+
+
+  // Let us access the arguments object
+const sumAllNums = (...args) => {
+
+ console.log(args)
+}
+
+sumAllNums(1, 2, 3, 4)
+
   
   // 0 1 2 4 5
